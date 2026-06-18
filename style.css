@@ -466,3 +466,88 @@ h1, h2, h3 {
     color: #8c7662;
     border-bottom-color: #1a1a1a;
 }
+
+@media (max-width: 768px) {
+    
+    /* --- 1. POPRAVKA ZA HERO BANER (Slika 1) --- */
+    .hero-section {
+        height: auto !important; /* Skidamo fiksnu visinu banera */
+        flex-direction: column !important; /* Slika ide gore, tekst ispod nje */
+        justify-content: flex-start !important;
+        padding-bottom: 2rem;
+    }
+
+    .hero-bg-img {
+        position: relative !important; /* Slika više ne leti iza teksta */
+        width: 100% !important;
+        height: 380px !important; /* Definišemo lepu visinu slike na telefonu */
+        object-fit: cover !important;
+        object-position: center !important; /* Centriramo tebe u okviru */
+    }
+
+    .hero-text-overlay {
+        width: 100% !important;
+        padding: 2rem 1.5rem 0 1.5rem !important; /* Pomeramo tekst skroz ispod slike */
+        text-align: center !important; /* Centriramo tekst radi ravnoteže */
+    }
+
+    .hero-text-overlay h1 {
+        font-size: 3.5rem !important; /* Smanjujemo font da se ne prelomi ružno */
+        margin-bottom: 1rem !important;
+        color: #1a1a1a !important;
+    }
+
+    .hero-text-overlay .hook {
+        font-size: 1.05rem !important;
+        margin: 0 auto 2rem auto !important;
+        color: #444444 !important;
+    }
+
+
+    /* --- 2. POPRAVKA ZA PROJEKTE (Slike 3 i 4) --- */
+    /* Pretpostavljam da tvoje kartice projekata imaju neku vrstu grida ili flexa na desktopu */
+    /* Ovim postižemo da slika projekta bude velika i jasna, a tekst uredno ispod nje */
+    .project-card, .projects-container, .project-item { 
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+    }
+
+    /* Osiguravamo da slike projekata zauzmu punu širinu i izgledaju čisto */
+    .project-image, .project-card img, .project-thumbnail {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 250px !important;
+        object-fit: cover !important;
+    }
+
+
+    /* --- 3. POPRAVKA ZA LET'S WORK TOGETHER KARTICU (Slika 2) --- */
+    .contact-section {
+        padding: 4rem 1rem !important; /* Dajemo malo spoljnog prostora do ivice ekrana */
+    }
+
+    .contact-card {
+        padding: 3rem 1.5rem !important; /* Dodajemo unutrašnji padding da tekst ne udara u ivice kartice */
+        box-sizing: border-box !important;
+    }
+
+    .contact-card h2 {
+        font-size: 2.2rem !important; /* Smanjujemo naslov */
+        line-height: 1.2 !important;
+    }
+
+    .contact-card p {
+        font-size: 1rem !important;
+        padding: 0 0.5rem !important;
+    }
+
+    /* Ključna popravka za Gmail - sprečava ispadanje dugačkog teksta */
+    .contact-email {
+        font-size: 1.25rem !important; /* Smanjen font da adresa stane u jedan red */
+        word-wrap: break-word !important; /* Ako je ekran baš mali, bezbedno će se prelomiti */
+        display: inline-block !important;
+        max-width: 100% !important;
+        overflow-wrap: break-word !important;
+    }
+}
