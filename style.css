@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap');
-
+/* ==========================================================================
+   1. GLOBALNI STILOVI & UVOZ FONTOVA
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&family=Inter:wght@300;400;500&display=swap');
 
 * {
     margin: 0;
@@ -11,7 +13,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 body {
     background-color: #ffffff; 
     color: #1a1a1a;
@@ -20,7 +21,7 @@ body {
     padding: 3rem 1.5rem; 
 }
 
-
+/* GLAVNI BEŽ OKVIR */
 .portfolio-container {
     max-width: 1100px;
     margin: 0 auto;
@@ -30,72 +31,12 @@ body {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02); 
 }
 
-/* TYPOGRAPHY */
+/* TIPOGRAFIJA */
 h1, h2, h3 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 500;
     color: #1a1a1a;
 }
-
-.hero-section {
-    position: relative;
-    width: 100%;
-    height: 550px; 
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; 
-    border-bottom: 1px solid #eadecf;
-    margin-bottom: 2rem;
-}
-
-
-.hero-bg-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: left center; 
-    z-index: 1;
-}
-
-
-.hero-text-overlay {
-    position: relative;
-    z-index: 2; 
-    width: 50%;
-    padding-right: 4rem; 
-    padding-left: 2rem;  
-}
-
-
-.hero-text-overlay .subtitle {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #8c7662; 
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-.hero-text-overlay h1 {
-    font-size: 5rem; 
-    line-height: 1;
-    margin-bottom: 1.5rem;
-    letter-spacing: -1px;
-    color: #1a1a1a; 
-}
-
-.hero-text-overlay .hook {
-    font-size: 1.1rem;
-    color: #444444;
-    margin-bottom: 2.5rem;
-    max-width: 420px; 
-    font-weight: 300;
-}
-
 
 .btn {
     display: inline-block;
@@ -114,7 +55,67 @@ h1, h2, h3 {
     background-color: #8c7662;
 }
 
-/* PROJECTS SECTION */
+/* ==========================================================================
+   2. HERO BANER SEKCIJA (DESKTOP)
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 550px; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    border-bottom: 1px solid #eadecf;
+    margin-bottom: 2rem;
+}
+
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center; 
+    z-index: 1;
+}
+
+.hero-text-overlay {
+    position: relative;
+    z-index: 2; 
+    width: 50%;
+    padding-right: 4rem; 
+    padding-left: 2rem;  
+}
+
+.hero-text-overlay .subtitle {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #8c7662; 
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text-overlay h1 {
+    font-size: 5rem; 
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.hero-text-overlay .hook {
+    font-size: 1.1rem;
+    color: #444444;
+    margin-bottom: 2.5rem;
+    max-width: 420px; 
+    font-weight: 300;
+}
+
+/* ==========================================================================
+   3. PROJEKTI / PROJECTS (DESKTOP)
+   ========================================================================== */
 .projects-section {
     padding: 7rem 0;
 }
@@ -132,7 +133,6 @@ h1, h2, h3 {
     font-weight: 300;
 }
 
-
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -140,13 +140,11 @@ h1, h2, h3 {
     row-gap: 6rem;
 }
 
-
 .project-card {
     background: transparent;
     display: flex;
     flex-direction: column;
 }
-
 
 .projects-grid > .project-card:nth-child(even) {
     margin-top: 5rem;
@@ -166,7 +164,6 @@ h1, h2, h3 {
     object-fit: cover;
     transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
-
 
 .project-card:hover .card-image img {
     transform: scale(1.03);
@@ -200,7 +197,6 @@ h1, h2, h3 {
     line-height: 1.6;
 }
 
-
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -217,7 +213,6 @@ h1, h2, h3 {
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
-
 
 .project-links-footer {
     margin-top: 0.5rem;
@@ -251,173 +246,45 @@ h1, h2, h3 {
 .about-box h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    color: #1a1a1a;
 }
 
 .about-box p {
-    color: #444444;
+    color: #444444; /* Tvoja originalna boja teksta */
+    font-family: 'Inter', sans-serif; /* Tvoj originalni font */
     font-size: 1.1rem;
     font-weight: 300;
     line-height: 1.7;
-}
-
-/* CONTACT */
-.contact-section {
-    padding: 8rem 0 4rem 0;
-    text-align: center;
-    border-top: 1px solid #eadecf;
-}
-
-.contact-section h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.contact-section p {
-    color: #777777;
-    margin-bottom: 2.5rem;
-    font-weight: 300;
-}
-
-.contact-link {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.8rem;
-    color: #1a1a1a;
-    text-decoration: none;
-    font-style: italic;
-    font-weight: 400;
-    transition: color 0.3s ease;
-}
-
-.contact-link:hover {
-    color: #8c7662;
-}
-
-/* RESPONSIVE - Prilagođavanje za mobilne telefone */
-@media (max-width: 768px) {
-    .hero-section {
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 2rem;
-        padding: 2rem 0;
-    }
-    .hero-text h1 {
-        font-size: 3.2rem;
-    }
-    .hero-image {
-        width: 260px;
-        height: 340px;
-    }
-    .projects-grid {
-        grid-template-columns: 1fr;
-        row-gap: 4rem;
-    }
-    .projects-grid > .project-card:nth-child(even) {
-        margin-top: 0;
-    }
-    .contact-link {
-        font-size: 2rem;
-    }
-}
- .portfolio-container {
-        padding: 2rem 1.5rem;
-    }
-
-    
-.about-section {
-    padding: 5rem 0;
-    border-bottom: 1px solid #eadecf;
-}
-
-.section-title {
-    font-size: 2.2rem;
-    margin-bottom: 3rem;
-    letter-spacing: -0.5px;
-    color: #1a1a1a;
-}
-
-
-
-.about-section {
-    position: relative;     
-    padding: 8rem 0;        
-    border-bottom: 1px solid #eadecf;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;       
-    box-sizing: border-box;
-}
-
-
-.about-bg-text {
-    position: absolute;
-    top: 10%;
-    left: -5%;
-    font-size: 14rem;
-    font-weight: 700;
-    font-family: 'Playfair Display', serif; 
-    color: #ede7de;                         
-    user-select: none;
-    z-index: 1;
-    pointer-events: none;
-}
-
-
-.about-content {
-    position: relative;
-    z-index: 2;             
-    max-width: 680px;       
-    width: 100%;
-    text-align: left;
-}
-
-
-.about-content .section-title {
-    font-size: 2.4rem;
-    color: #1a1a1a;
-    margin-bottom: 2.5rem;
-    letter-spacing: -0.5px;
-}
-
-
-.about-content .about-text {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: #444444;
     margin-bottom: 1.5rem;
 }
 
-
-.about-content .about-highlight {
-    font-size: 1.0.5rem;
-    line-height: 1.6;
-    color: #444444;        
-    margin-top: 2.5rem;     
-    font-weight: 400;
+/* Istaknuti pasus na dnu About sekcije prati isti font i boju, samo je malo naglašeniji */
+.about-box .about-highlight {
+    font-weight: 300;
+    color: #444; 
+    margin-top: 2rem;
 }
 
-
+/* Prilagođavanje About sekcije za mobilne telefone */
 @media (max-width: 768px) {
     .about-section {
-        padding: 4rem 0;    
+        padding: 4rem 0;
     }
-
-    .about-bg-text {
-        font-size: 8rem;    
-        top: 5%;
-    }
-
-    .about-content .section-title {
+    .about-box h2 {
         font-size: 2rem;
-        margin-bottom: 1.5rem;
+        text-align: center;
     }
-
-    .about-content .about-highlight {
-        font-size: 1.2rem;
-        margin-top: 1.5rem;
+    .about-box p {
+        font-size: 1rem;
+        text-align: center;
     }
 }
 
-
+/* ==========================================================================
+   5. CONTACT SEKCIJA (DESKTOP)
+   ========================================================================== */
 .contact-section {
     padding: 7rem 0 4rem 0;
     display: flex;
@@ -426,7 +293,7 @@ h1, h2, h3 {
 
 .contact-card {
     background: #ebddce; 
-    border: 1px solid #ebddce;
+    border: 1px solid #eadecf;
     padding: 4rem 3rem;
     text-align: center;
     max-width: 700px;
@@ -438,7 +305,6 @@ h1, h2, h3 {
     font-size: 3rem;
     margin-bottom: 1.5rem;
     letter-spacing: -1px;
-    color: #1a1a1a;
 }
 
 .contact-card p {
@@ -458,7 +324,6 @@ h1, h2, h3 {
     padding-bottom: 6px;
     border-bottom: 1px solid #8c7662; 
     display: inline-block;
-    -webkit-font-smoothing: antialiased;
     transition: all 0.3s ease;
 }
 
@@ -467,87 +332,111 @@ h1, h2, h3 {
     border-bottom-color: #1a1a1a;
 }
 
+/* ==========================================================================
+   6. RESPONSIVE / MOBILNA VERZIJA (Ekran do 768px)
+   ========================================================================== */
 @media (max-width: 768px) {
     
-    /* --- 1. POPRAVKA ZA HERO BANER (Slika 1) --- */
+    body {
+        padding: 1rem 0.5rem !important; 
+    }
+
+    .portfolio-container {
+        padding: 2rem 1.2rem !important; 
+    }
+
+    /* MOBILNI BANER - POPRAVKA TEKSTA PREKO LICA */
     .hero-section {
-        height: auto !important; /* Skidamo fiksnu visinu banera */
-        flex-direction: column !important; /* Slika ide gore, tekst ispod nje */
+        height: auto !important; 
+        display: flex !important;
+        flex-direction: column !important; /* Slika ide skroz gore, tekst ispod nje */
         justify-content: flex-start !important;
-        padding-bottom: 2rem;
+        align-items: center !important;
+        padding-bottom: 2.5rem !important;
+        border-bottom: 1px solid #eadecf !important;
     }
 
     .hero-bg-img {
-        position: relative !important; /* Slika više ne leti iza teksta */
+        position: relative !important; /* Sklanja se iz pozadine teksta */
         width: 100% !important;
-        height: 380px !important; /* Definišemo lepu visinu slike na telefonu */
+        height: 320px !important; /* Slika dobija fiksni prozor na vrhu telefona */
         object-fit: cover !important;
-        object-position: center !important; /* Centriramo tebe u okviru */
+        object-position: center !important; 
+        z-index: 1 !important;
     }
 
     .hero-text-overlay {
         width: 100% !important;
-        padding: 2rem 1.5rem 0 1.5rem !important; /* Pomeramo tekst skroz ispod slike */
-        text-align: center !important; /* Centriramo tekst radi ravnoteže */
+        padding: 2.5rem 0 0 0 !important; /* Tekst uredno sedi u svom bež prostoru ispod slike */
+        text-align: center !important;
+        z-index: 2 !important;
     }
 
     .hero-text-overlay h1 {
-        font-size: 3.5rem !important; /* Smanjujemo font da se ne prelomi ružno */
+        font-size: 3.5rem !important; 
         margin-bottom: 1rem !important;
-        color: #1a1a1a !important;
     }
 
     .hero-text-overlay .hook {
         font-size: 1.05rem !important;
         margin: 0 auto 2rem auto !important;
-        color: #444444 !important;
     }
 
-
-    /* --- 2. POPRAVKA ZA PROJEKTE (Slike 3 i 4) --- */
-    /* Pretpostavljam da tvoje kartice projekata imaju neku vrstu grida ili flexa na desktopu */
-    /* Ovim postižemo da slika projekta bude velika i jasna, a tekst uredno ispod nje */
-    .project-card, .projects-container, .project-item { 
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 1.5rem !important;
+    /* PROJEKTI U JEDNU KOLONU */
+    .projects-section {
+        padding: 4rem 0 !important;
     }
 
-    /* Osiguravamo da slike projekata zauzmu punu širinu i izgledaju čisto */
-    .project-image, .project-card img, .project-thumbnail {
-        width: 100% !important;
-        height: auto !important;
-        max-height: 250px !important;
-        object-fit: cover !important;
+    .projects-grid {
+        grid-template-columns: 1fr !important; 
+        row-gap: 4rem !important;
     }
 
+    .projects-grid > .project-card:nth-child(even) {
+        margin-top: 0 !important; 
+    }
 
-    /* --- 3. POPRAVKA ZA LET'S WORK TOGETHER KARTICU (Slika 2) --- */
+    .card-image {
+        height: 240px !important; 
+    }
+
+    .card-content h3 {
+        font-size: 1.75rem !important;
+    }
+
+    /* ABOUT ME MOBILNI */
+    .about-section {
+        padding: 4rem 0 !important;    
+    }
+
+    .about-content .section-title {
+        font-size: 2.2rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .about-content .about-highlight {
+        font-size: 1.2rem !important;
+        margin-top: 1.5rem !important;
+    }
+
+    /* KONTAKT KARTICA */
     .contact-section {
-        padding: 4rem 1rem !important; /* Dajemo malo spoljnog prostora do ivice ekrana */
+        padding: 4rem 0 2rem 0 !important;
     }
 
     .contact-card {
-        padding: 3rem 1.5rem !important; /* Dodajemo unutrašnji padding da tekst ne udara u ivice kartice */
-        box-sizing: border-box !important;
+        padding: 3rem 1.2rem !important; 
     }
 
     .contact-card h2 {
-        font-size: 2.2rem !important; /* Smanjujemo naslov */
-        line-height: 1.2 !important;
+        font-size: 2.2rem !important;
     }
 
-    .contact-card p {
-        font-size: 1rem !important;
-        padding: 0 0.5rem !important;
-    }
-
-    /* Ključna popravka za Gmail - sprečava ispadanje dugačkog teksta */
     .contact-email {
-        font-size: 1.25rem !important; /* Smanjen font da adresa stane u jedan red */
-        word-wrap: break-word !important; /* Ako je ekran baš mali, bezbedno će se prelomiti */
+        font-size: 1.3rem !important; 
+        word-wrap: break-word !important; 
+        overflow-wrap: break-word !important;
         display: inline-block !important;
         max-width: 100% !important;
-        overflow-wrap: break-word !important;
     }
 }
